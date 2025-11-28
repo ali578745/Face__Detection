@@ -62,7 +62,8 @@ def run_inference(args):
                 results = model.recognition(cropped_rgb, args.database)
                 if results and len(results) > 0:
                     identity, distance = model.get_best_match(results)
-                    if identity and distance < 25.0:  
+                    threshold = 23.56
+                    if identity and distance <= threshold:  
                         label = os.path.basename(os.path.dirname(identity))
             except Exception:
                 pass
