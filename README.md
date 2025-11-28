@@ -36,7 +36,7 @@ tensorflow
 # 3. Prepare Data:
 ***Note: This repo does not come with test images or database***
 **For face verification :**
- Place two **images** eg. test and random image in project folder or can use **live webcam** for input **image**.
+ Place  **images** eg. test and database  in project folder or can use **live webcam** for input **image**.
 
  **For Recognition :**
  Can use the same test **image** or **live webcam** and make the following database.
@@ -56,12 +56,12 @@ database/
 
 **From image files :**
 ```python
-python main.py --test test.jpg --random random.jpg
+python main.py --test test.jpg --database database.jpg
 ```
 
-**From webcam + reference image :**
+**From webcam + database :**
 ```python
-python main.py --webcam --random random.jpg
+python main.py --webcam --database database.jpg
 ```
 ***Recognition:***
 
@@ -74,7 +74,3 @@ python main.py --test test.jpg --database database
 python main.py --webcam --database database
 ```
 
-**Notes:**
-Press SPACE to capture image from webcam
-Press ESC to cancel webcam capture
-First run may take longer (DeepFace builds face embeddings)

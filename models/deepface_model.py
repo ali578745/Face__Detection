@@ -33,3 +33,11 @@ class DeepFaceModel:
         df = recognition_result[0]     
         best = df.iloc[0]             
         return best["identity"], best["distance"]
+    
+
+    def extract_faces(self, face):
+        return DeepFace.extract_faces(
+            img_path=face,
+            detector_backend='retinaface',
+            enforce_detection=False
+        )
